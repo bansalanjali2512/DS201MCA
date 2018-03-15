@@ -1,4 +1,4 @@
-// Program to implement using stack operations using STL queue
+// Program to implement stack operations using STL queue
 
 #include <iostream>
 #include <cstdlib>
@@ -20,12 +20,12 @@ class Stack
 	queue<int> q2;				   // temporary queue
 	
 	public:
-	Stack();					      // default constructor
-	~Stack();					      // destructor to delete dynamically created array
+	Stack();				   // default constructor
+	~Stack();				   // destructor to delete dynamically created array
 	void push(int element);
 	void pop();
 	int peek();
-	int size();					    // for current size of stack
+	int size();				  // for current size of stack
 	bool isEmpty();
 	bool isFull();
 };
@@ -71,7 +71,7 @@ void Stack::push(int element) {
     Input Parameters:
     	element: element to be inserted in stack
     Return Value: None
-    Approach: Push element in stack if it is not full else print stack overflow
+    Approach: Push element in stack using STL queues
     */
 	
 	int prevData;
@@ -145,7 +145,7 @@ int main() {
 	
 	Stack s;
 	char choice;
-	int option;
+	char option;
 	int element;
 	
 	do {
@@ -155,12 +155,12 @@ int main() {
 		cin >> option;
 		
 		switch(option) {
-			case 1:
+			case '1':
 				cout << "\n Enter element to push: ";
 				cin >> element;
 				s.push(element);
 				break;
-			case 2:
+			case '2':
 				if(s.isEmpty()) {
 					cout << "\n Stack is empty!!";
 				}
@@ -169,7 +169,7 @@ int main() {
 					s.pop();
 				}
 				break;
-			case 3:
+			case '3':
 				if(s.isEmpty()) {
 					cout << "\n Stack is empty!!";
 				}
@@ -177,7 +177,7 @@ int main() {
 					cout << "\n Element at top is: " << s.peek();
 				}
 				break;
-			case 4:
+			case '4':
 				exit(0);
 				break;
 			default:
